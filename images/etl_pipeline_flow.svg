@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#FFFFFF"/>
+<style>
+text { font-family: Arial, Helvetica, sans-serif; fill:#17232B; }
+.title { font-size:46px; font-weight:700; }
+.sub { font-size:24px; fill:#586268; }
+.box { fill:#FFFFFF; stroke:#586268; stroke-width:2; rx:18; }
+.accent { fill:#F6F3FA; stroke:#7C6AA6; stroke-width:2; rx:18; }
+.head { font-size:23px; font-weight:700; }
+.small { font-size:18px; fill:#586268; }
+.arrow { stroke:#17232B; stroke-width:3; fill:none; marker-end:url(#a); }
+</style>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#17232B"/></marker></defs>
+<text x="800" y="70" text-anchor="middle" class="title">Operational ETL Pipeline</text>
+<text x="800" y="110" text-anchor="middle" class="sub">Excel validation, return loop and dimensional PostgreSQL loading</text>
+<rect x="60" y="280" width="220" height="130" class="box"/><text x="170" y="330" text-anchor="middle" class="head">Operational Excel</text><text x="170" y="363" text-anchor="middle" class="head">Workbook</text><text x="170" y="395" text-anchor="middle" class="small">fictional audit data</text>
+<rect x="330" y="280" width="190" height="130" class="box"/><text x="425" y="350" text-anchor="middle" class="head">Extract</text>
+<rect x="570" y="250" width="240" height="190" class="box"/><text x="690" y="305" text-anchor="middle" class="head">Clean &amp; Standardise</text><text x="690" y="345" text-anchor="middle" class="small">remove blank rows</text><text x="690" y="375" text-anchor="middle" class="small">clean text</text><text x="690" y="405" text-anchor="middle" class="small">standardise dates</text>
+<rect x="860" y="250" width="230" height="190" class="box"/><text x="975" y="305" text-anchor="middle" class="head">Validate</text><text x="975" y="345" text-anchor="middle" class="small">required fields</text><text x="975" y="375" text-anchor="middle" class="small">date sequences</text><text x="975" y="405" text-anchor="middle" class="small">business-day logic</text>
+<rect x="1160" y="120" width="330" height="180" class="accent"/><text x="1325" y="175" text-anchor="middle" class="head">Return Workbook</text><text x="1325" y="215" text-anchor="middle" class="small">unworked records</text><text x="1325" y="245" text-anchor="middle" class="small">validation errors</text><text x="1325" y="275" text-anchor="middle" class="small">valid incomplete records</text>
+<rect x="1160" y="380" width="250" height="130" class="box"/><text x="1285" y="455" text-anchor="middle" class="head">Loadable Records</text>
+<rect x="900" y="590" width="240" height="140" class="box"/><text x="1020" y="645" text-anchor="middle" class="head">Map Dimension Keys</text><text x="1020" y="682" text-anchor="middle" class="small">agent + task type</text>
+<rect x="590" y="590" width="250" height="140" class="box"/><text x="715" y="645" text-anchor="middle" class="head">Upsert fact_admin</text><text x="715" y="682" text-anchor="middle" class="small">return transaction_key</text>
+<rect x="270" y="560" width="260" height="200" class="box"/><text x="400" y="615" text-anchor="middle" class="head">Populate Related Tables</text><text x="400" y="655" text-anchor="middle" class="small">agent bridge</text><text x="400" y="685" text-anchor="middle" class="small">account dimension + bridge</text><text x="400" y="715" text-anchor="middle" class="small">audit extension</text>
+<rect x="40" y="590" width="190" height="140" class="accent"/><text x="135" y="642" text-anchor="middle" class="head">Operational</text><text x="135" y="674" text-anchor="middle" class="head">Analytics</text><text x="135" y="706" text-anchor="middle" class="head">Database</text>
+<path d="M280 345 H330" class="arrow"/><path d="M520 345 H570" class="arrow"/><path d="M810 345 H860" class="arrow"/><path d="M1090 315 C1130 300,1130 210,1160 210" class="arrow"/><path d="M1090 375 C1120 390,1120 445,1160 445" class="arrow"/><path d="M1285 510 C1285 555,1090 555,1040 590" class="arrow"/><path d="M900 660 H840" class="arrow"/><path d="M590 660 H530" class="arrow"/><path d="M270 660 H230" class="arrow"/>
+</svg>
